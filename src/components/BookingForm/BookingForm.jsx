@@ -13,16 +13,32 @@ const BookingForm = () => {
   const initialValues = {
     name: "",
     email: "",
+    date: null,
     comment: "",
   };
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
-    email: Yup.string().email("Invalid email format").required("Email is required"),
+    email: Yup.string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    date: Yup.date()
+      .required("Please select a booking date")
+      .min(new Date(), "Booking date cannot be in the past")
+      .nullable()
+      .typeError("Please select a booking date"),
   });
 
-  const handleSubmit = (values, { resetForm }) => {
-    toast.success("Booking submitted successfully!");
+  const handleSubmit = (values, { resetForm, setFieldTouched }) => {
+    if (!values.date) {
+      setFieldTouched("date", true, true);
+      toast.error(
+        "Please select a booking date to proceed with your reservation"
+      );
+      return;
+    }
+
+    toast.success("Your booking request has been submitted successfully!");
     resetForm();
     setSelectedDate(null);
   };
@@ -40,7 +56,7 @@ const BookingForm = () => {
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ setFieldValue }) => (
+        {({ setFieldValue, errors, touched, setFieldTouched }) => (
           <Form className={styles.booking_form}>
             <div>
               <Field
@@ -68,16 +84,28 @@ const BookingForm = () => {
                 className={styles.error_message}
               />
             </div>
-            <DatePicker
-              selected={selectedDate}
-              onChange={(date) => {
-                setSelectedDate(date);
-                setFieldValue("date", date);
-              }}
-              dateFormat="dd.MM.yyyy"
-              placeholderText="dd.mm.yyyy"
-              className={`${styles.input} ${styles.date_input}`}
-            />
+            <div>
+              <DatePicker
+                selected={selectedDate}
+                onChange={(date) => {
+                  setSelectedDate(date);
+                  setFieldValue("date", date);
+                  setFieldTouched("date", true, true);
+                }}
+                onBlur={() => setFieldTouched("date", true)}
+                dateFormat="dd.MM.yyyy"
+                placeholderText="Select booking date*"
+                minDate={new Date()}
+                className={`${styles.input} ${styles.date_input} ${
+                  errors.date && touched.date ? styles.error_input : ""
+                }`}
+              />
+              <ErrorMessage
+                name="date"
+                component="div"
+                className={styles.error_message}
+              />
+            </div>
             <Field
               as="textarea"
               name="comment"
@@ -86,7 +114,10 @@ const BookingForm = () => {
               className={styles.input}
               style={{ resize: "none" }}
             />
-            <button type="submit" className={`${styles.submit_button} primary_button`}>
+            <button
+              type="submit"
+              className={`${styles.submit_button} primary_button`}
+            >
               Send
             </button>
           </Form>
