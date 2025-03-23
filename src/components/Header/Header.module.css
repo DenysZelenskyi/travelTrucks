@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  background-color: var(--inputs);
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.icon {
+  width: 136px;
+  height: 16px;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--main);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover {
+  color: var(--button-hover);
+}
+
+.link:active {
+  color: var(--button-hover);
+}

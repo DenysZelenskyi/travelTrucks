@@ -1,0 +1,66 @@
+.booking_section {
+  background-color: var(--white);
+  padding: 44px 57px;
+  border-radius: 10px;
+}
+
+.section_title {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--main);
+  margin-bottom: 24px;
+}
+
+.form_title {
+  margin-bottom: 20px;
+}
+
+.form_text {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray);
+  margin-bottom: 36px;
+}
+
+.booking_form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking_form input,
+.booking_form textarea,
+.booking_form .date_input {
+  padding: 18px;
+  background-color: var(--inputs);
+  border-radius: 12px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray);
+  outline: none;
+}
+
+.input,
+.date_input {
+  width: 92%;
+}
+
+.booking_form textarea {
+  resize: none;
+  margin-bottom: 24px;
+}
+
+.submit_button {
+  padding: 16px 63px;
+  max-width: 166px;
+  margin: auto;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.error_message {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}

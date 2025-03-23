@@ -1,0 +1,32 @@
+.homepage_container {
+  padding: 260px 64px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .homepage_container {
+    background-image: url("../../assets/HomePage/hero@2x.jpg");
+  }
+}
+
+.title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.67;
+  color: var(--white);
+}
+
+.text {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--white);
+}
+
+.btn {
+  padding: 16px 60px;
+}

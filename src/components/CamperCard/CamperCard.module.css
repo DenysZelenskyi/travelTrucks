@@ -1,0 +1,138 @@
+.card {
+  border: 1px solid var(--gray-light);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.image_placeholder {
+  width: 292px;
+  height: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.image_placeholder img {
+  width: 292px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  flex: 1;
+}
+
+.name_and_price_favorite {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--main);
+  margin-bottom: 8px;
+}
+
+.price_and_favorite {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--main);
+}
+
+.favorite_icon {
+  width: 26px;
+  height: 24px;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+.favorite_icon:hover,
+.favorite_icon:focus {
+  fill: var(--button);
+}
+
+.active {
+  fill: var(
+    --button
+  );
+}
+
+.rating_and_location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 24px;
+}
+
+.rating,
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.star_icon,
+.location_icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.star_icon {
+  fill: var(--badges);
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 42px;
+  width: 400px;
+  max-width: 100%;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  border: 1px solid var(--gray-light);
+  border-radius: 20px;
+  background-color: var(--badges);
+  font-size: 14px;
+  color: var(--main);
+}
+
+.feature_icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--main);
+}
+
+.show_more_button {
+  margin-top: auto;
+  padding: 16px 40px;
+  text-decoration: none;
+}

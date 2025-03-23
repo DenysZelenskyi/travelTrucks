@@ -1,0 +1,127 @@
+.filter_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.location {
+  margin-bottom: 32px;
+}
+
+.label {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.input_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 20px;
+  height: 20px;
+  fill: var(--gray);
+}
+
+.search_input {
+  width: 100%;
+  padding: 16px 20px 16px 48px;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  background-color: var(--inputs);
+  border: none;
+  outline: none;
+}
+
+.search_input::placeholder {
+  color: var(--gray);
+  opacity: 1;
+}
+
+.search_input:focus::placeholder {
+  color: var(--main);
+}
+
+.filters_title {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+}
+
+.filter_category {
+  margin-bottom: 32px;
+}
+
+.category_title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  padding-bottom: 24px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 12px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  background-color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--main);
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.option:hover,
+.option:focus {
+  border-color: var(--button-hover);
+}
+
+.option:active {
+  border-color: var(--button);
+}
+
+.active_option {
+  border-color: var(--button);
+  background-color: var(--inputs-hover);
+}
+
+.option_icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--main);
+}
+
+.search_button_container {
+  display: flex;
+  justify-content: left;
+}
+
+.search_button {
+  padding: 16px 56px;
+}

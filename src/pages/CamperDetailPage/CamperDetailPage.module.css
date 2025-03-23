@@ -1,0 +1,275 @@
+.container {
+  margin: 0 auto;
+  padding: 48px 64px;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--main);
+  margin-bottom: 8px;
+}
+
+.rating_location {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  color: var(--main);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.rating,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star_icon,
+.location_icon {
+  width: 16px;
+  height: 16px;
+}
+
+.star_icon_yellow {
+  fill: var(--rating);
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-bottom: 28px;
+}
+
+.gallery_image {
+  width: calc(25% - 48px);
+  height: 312px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 60px;
+}
+
+.tabs {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 44px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--inputs);
+}
+
+.tab_button {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--main);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-bottom: 8px;
+  transition: border-bottom 0.1s ease;
+}
+
+.active {
+  border-bottom: 3px solid var(--button);
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.features_section,
+.reviews_section {
+  flex: 1;
+  background-color: var(--inputs);
+  padding: 44px 57px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking_section {
+  flex: 1;
+  background-color: var(--white);
+}
+
+.section_title {
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--main);
+  margin-bottom: 48px;
+}
+
+.section_title:before {
+  content: "";
+  background-color: var(--gray-light);
+  width: 576px;
+  height: 1px;
+  top: 48px;
+  position: absolute;
+}
+
+.form_title {
+  margin-bottom: 20px;
+}
+
+.form_text {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray);
+  margin-bottom: 36px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 527px;
+  margin-bottom: 100px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--main);
+  background-color: var(--badges);
+  border-radius: 100px;
+}
+
+.feature_icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.details p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+}
+
+.booking_form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking_form input,
+.booking_form textarea,
+.booking_form .date_input {
+  padding: 18px;
+  background-color: var(--inputs);
+  border-radius: 12px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray);
+  outline: none;
+}
+
+.booking_form textarea {
+  margin-bottom: 24px;
+}
+
+.date_input {
+  width: 93%;
+}
+
+.booking_form textarea {
+  resize: none;
+}
+
+.submit_button {
+  padding: 16px 63px;
+  max-width: 166px;
+  margin: auto;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.reviews_section {
+  padding: 0;
+  background-color: var(--white);
+}
+
+.review_card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--badges);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--button);
+}
+
+.review_content {
+  flex: 1;
+}
+
+.review_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.reviewer_name {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--main);
+}
+
+.review_rating {
+  display: flex;
+  gap: 4px;
+}
+
+.review_text {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.date_input::placeholder {
+  color: var(--gray);
+}
